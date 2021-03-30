@@ -1,7 +1,7 @@
 {
-  "name": "tobehero-backend",
+  "name": "ecommerce-backend",
   "version": "0.0.1",
-  "description": "ToBeHero platform",
+  "description": "ecommerce platform",
   "main": "app.js",
   "scripts": {
     "start": "cross-env NODE_ENV='production' nodemon app.js",
@@ -9,14 +9,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Unknown-squad/toBeHero-backend.git"
+    "url": "https://github.com/osamamammar/Ecommerce-Site.git"
   },
   "author": "",
-  "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/Unknown-squad/toBeHero-backend/issues"
-  },
-  "homepage": "https://github.com/Unknown-squad/toBeHero-backend#readme",
+  "license": "MIT LICENSE",
   "dependencies": {
     "bcrypt": "^5.0.0",
     "connect-mongodb-session": "^2.4.1",
