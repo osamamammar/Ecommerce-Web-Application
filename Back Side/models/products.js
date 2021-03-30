@@ -1,38 +1,48 @@
-// Import requirement modules
+// Import required modules
 const mongoose = require('mongoose');
 
-// Create user schema
-const UserSchema = new mongoose.Schema({
+// Create product Schema
+const ProductSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true
   },
-  email: {
-    type: String,
-    unique: true,
-    match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please add a valid email'],
+  price: {
+    type: Number,
     required: true
   },
-  password: {
+  image: {
     type: String,
     required: true
   },
-  confirmPassword: {
+  brand: {
     type: String,
     required: true
+  },
+  category: {
+    type: String,
+    required: true
+  },
+  countInStock: {
+    type: Number,
+    required: true
+  },
+  description: {
+    type: String,
+    required: true
+  },
+  numberOfReviews: {
+    type: Number,
+    default: 0
   },
   creatingDate: {
     type: Date,
     default: Date.now
   },
-  isAdmin: {
-    type: Boolean,
-    default: false 
-  },
-  products: [
+  users: [
     {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'products',
+      ref: 'users',
       required: true
     }
   ],
@@ -45,4 +55,4 @@ const UserSchema = new mongoose.Schema({
   ]
 });
 
-module.exports = mongoose.model('Users', UserSchema);
+module.exports = mongoose.model('Products', ProductSchema);
