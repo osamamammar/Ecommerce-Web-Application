@@ -9,7 +9,6 @@ const MongoDBStore = require('connect-mongodb-session')(session);
 
 // Add middleware files
 
-
 // Add config files
 const connectDB = require(`./config/db`);
 
@@ -44,11 +43,6 @@ app.use(require('express-session')({
 
 // Access to public folder
 app.use(express.static(path.join(__dirname, 'public')));
-
-// Add routes files
-
-
-// Handle error
 
 
 // Connect to server
