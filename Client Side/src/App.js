@@ -44,6 +44,7 @@ function App() {
             path="/admin/productlist"
             component={ProductListScreen}
           ></Route>
+          <Route path="/search/:keyword" component={HomeScreen}></Route>
           <Route path="/" component={HomeScreen} exact></Route>
         </Container>
       </main>
